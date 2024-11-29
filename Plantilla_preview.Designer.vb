@@ -22,23 +22,26 @@ Partial Class Plantilla_preview
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Plantilla_preview))
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.name_textBox = New System.Windows.Forms.TextBox()
         Me.MashDataSet = New Proyecto_Enciclopedia.mashDataSet()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PersonajesTableAdapter1 = New Proyecto_Enciclopedia.mashDataSetTableAdapters.personajesTableAdapter()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.saga_TextBox = New System.Windows.Forms.TextBox()
+        Me.year_TextBox = New System.Windows.Forms.TextBox()
+        Me.Peso_TextBox = New System.Windows.Forms.TextBox()
+        Me.high_TextBox = New System.Windows.Forms.TextBox()
+        Me.Id_TextBox = New System.Windows.Forms.TextBox()
+        Me.Panel1.SuspendLayout()
         CType(Me.MashDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'RichTextBox1
         '
         Me.RichTextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.RichTextBox1.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.0!)
         Me.RichTextBox1.ForeColor = System.Drawing.Color.White
         Me.RichTextBox1.Location = New System.Drawing.Point(12, 249)
         Me.RichTextBox1.Name = "RichTextBox1"
@@ -47,25 +50,34 @@ Partial Class Plantilla_preview
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = "Descripcion del presonaje:"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(159, 231)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Panel1.Location = New System.Drawing.Point(178, 12)
+        Me.Panel1.Controls.Add(Me.high_TextBox)
+        Me.Panel1.Controls.Add(Me.Peso_TextBox)
+        Me.Panel1.Controls.Add(Me.year_TextBox)
+        Me.Panel1.Controls.Add(Me.saga_TextBox)
+        Me.Panel1.Controls.Add(Me.name_textBox)
+        Me.Panel1.Controls.Add(Me.Id_TextBox)
+        Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(184, 231)
+        Me.Panel1.Size = New System.Drawing.Size(350, 231)
         Me.Panel1.TabIndex = 7
+        '
+        'name_textBox
+        '
+        Me.name_textBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.name_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.name_textBox.Dock = System.Windows.Forms.DockStyle.Top
+        Me.name_textBox.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.name_textBox.ForeColor = System.Drawing.Color.White
+        Me.name_textBox.Location = New System.Drawing.Point(0, 37)
+        Me.name_textBox.Name = "name_textBox"
+        Me.name_textBox.ReadOnly = True
+        Me.name_textBox.Size = New System.Drawing.Size(350, 37)
+        Me.name_textBox.TabIndex = 0
+        Me.name_textBox.Text = "Nombre"
+        Me.name_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'MashDataSet
         '
@@ -75,7 +87,6 @@ Partial Class Plantilla_preview
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Location = New System.Drawing.Point(4, 8)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(364, 469)
@@ -84,6 +95,80 @@ Partial Class Plantilla_preview
         'PersonajesTableAdapter1
         '
         Me.PersonajesTableAdapter1.ClearBeforeFill = True
+        '
+        'saga_TextBox
+        '
+        Me.saga_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.saga_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.saga_TextBox.Dock = System.Windows.Forms.DockStyle.Top
+        Me.saga_TextBox.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.saga_TextBox.ForeColor = System.Drawing.Color.White
+        Me.saga_TextBox.Location = New System.Drawing.Point(0, 74)
+        Me.saga_TextBox.Name = "saga_TextBox"
+        Me.saga_TextBox.ReadOnly = True
+        Me.saga_TextBox.Size = New System.Drawing.Size(350, 37)
+        Me.saga_TextBox.TabIndex = 1
+        Me.saga_TextBox.Text = "Saga"
+        Me.saga_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'year_TextBox
+        '
+        Me.year_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.year_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.year_TextBox.Dock = System.Windows.Forms.DockStyle.Top
+        Me.year_TextBox.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.year_TextBox.ForeColor = System.Drawing.Color.White
+        Me.year_TextBox.Location = New System.Drawing.Point(0, 111)
+        Me.year_TextBox.Name = "year_TextBox"
+        Me.year_TextBox.ReadOnly = True
+        Me.year_TextBox.Size = New System.Drawing.Size(350, 37)
+        Me.year_TextBox.TabIndex = 2
+        Me.year_TextBox.Text = "Year"
+        Me.year_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Peso_TextBox
+        '
+        Me.Peso_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Peso_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Peso_TextBox.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Peso_TextBox.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Peso_TextBox.ForeColor = System.Drawing.Color.White
+        Me.Peso_TextBox.Location = New System.Drawing.Point(0, 148)
+        Me.Peso_TextBox.Name = "Peso_TextBox"
+        Me.Peso_TextBox.ReadOnly = True
+        Me.Peso_TextBox.Size = New System.Drawing.Size(350, 37)
+        Me.Peso_TextBox.TabIndex = 3
+        Me.Peso_TextBox.Text = "Peso"
+        Me.Peso_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'high_TextBox
+        '
+        Me.high_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.high_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.high_TextBox.Dock = System.Windows.Forms.DockStyle.Top
+        Me.high_TextBox.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.high_TextBox.ForeColor = System.Drawing.Color.White
+        Me.high_TextBox.Location = New System.Drawing.Point(0, 185)
+        Me.high_TextBox.Name = "high_TextBox"
+        Me.high_TextBox.ReadOnly = True
+        Me.high_TextBox.Size = New System.Drawing.Size(350, 37)
+        Me.high_TextBox.TabIndex = 4
+        Me.high_TextBox.Text = "Altura"
+        Me.high_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Id_TextBox
+        '
+        Me.Id_TextBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Id_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Id_TextBox.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Id_TextBox.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Id_TextBox.ForeColor = System.Drawing.Color.White
+        Me.Id_TextBox.Location = New System.Drawing.Point(0, 0)
+        Me.Id_TextBox.Name = "Id_TextBox"
+        Me.Id_TextBox.ReadOnly = True
+        Me.Id_TextBox.Size = New System.Drawing.Size(350, 37)
+        Me.Id_TextBox.TabIndex = 5
+        Me.Id_TextBox.Text = "Id"
         '
         'Plantilla_preview
         '
@@ -96,17 +181,22 @@ Partial Class Plantilla_preview
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Plantilla_preview"
         Me.Text = "Plantilla_preview"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.MashDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents MashDataSet As mashDataSet
     Friend WithEvents PersonajesTableAdapter1 As mashDataSetTableAdapters.personajesTableAdapter
+    Friend WithEvents name_textBox As TextBox
+    Friend WithEvents high_TextBox As TextBox
+    Friend WithEvents Peso_TextBox As TextBox
+    Friend WithEvents year_TextBox As TextBox
+    Friend WithEvents saga_TextBox As TextBox
+    Friend WithEvents Id_TextBox As TextBox
 End Class

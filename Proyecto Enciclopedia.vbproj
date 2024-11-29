@@ -126,6 +126,7 @@
       <DependentUpon>Administrado_1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Info_manager.vb" />
     <Compile Include="mashDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -9,7 +9,7 @@ Public Class Menu_inicio
     Private currentBtn As IconButton
     Private leftborderBtn As Panel
     Private currentchildform As Form
-    Private connectionString As String = "DataSource=ETHIANNE;InitialCatalog=mash;IntegratedSecurity=true"
+
 
     Public Sub New()
 
