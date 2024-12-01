@@ -1071,16 +1071,17 @@ Namespace mashDataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "UPDATE personajes"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET          id = @id, nombre = @nombre, saga = @saga, año_cre"& _ 
-                "acion = @año_creacion, peso_kg = @peso_kg, altura_m = @altura_m, Color = @Color"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (id = @id) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+            Me._commandCollection(1).CommandText = "UPDATE personajes"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET          nombre = @nombre, saga = @saga, año_creacion = @a"& _ 
+                "ño_creacion, peso_kg = @peso_kg, altura_m = @altura_m, Color = @Color"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (i"& _ 
+                "d = @id)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.VarChar, 25, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@saga", Global.System.Data.SqlDbType.VarChar, 25, Global.System.Data.ParameterDirection.Input, 0, 0, "saga", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@año_creacion", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "año_creacion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@peso_kg", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "peso_kg", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@altura_m", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "altura_m", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Color", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "Color", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "INSERT INTO personajes"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  (id, nombre, saga, año_creacion, peso_k"& _ 
@@ -1412,39 +1413,39 @@ Namespace mashDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
-        Public Overloads Overridable Function Actualizar_Pj(ByVal id As Integer, ByVal nombre As String, ByVal saga As String, ByVal año_creacion As Global.System.Nullable(Of Integer), ByVal peso_kg As Global.System.Nullable(Of Double), ByVal altura_m As Global.System.Nullable(Of Double), ByVal Color As String) As Integer
+        Public Overloads Overridable Function Actualizar_Pj(ByVal nombre As String, ByVal saga As String, ByVal año_creacion As Global.System.Nullable(Of Integer), ByVal peso_kg As Global.System.Nullable(Of Double), ByVal altura_m As Global.System.Nullable(Of Double), ByVal Color As String, ByVal id As Integer) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
-            command.Parameters(0).Value = CType(id,Integer)
             If (nombre Is Nothing) Then
-                command.Parameters(1).Value = Global.System.DBNull.Value
+                command.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(1).Value = CType(nombre,String)
+                command.Parameters(0).Value = CType(nombre,String)
             End If
             If (saga Is Nothing) Then
-                command.Parameters(2).Value = Global.System.DBNull.Value
+                command.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(2).Value = CType(saga,String)
+                command.Parameters(1).Value = CType(saga,String)
             End If
             If (año_creacion.HasValue = true) Then
-                command.Parameters(3).Value = CType(año_creacion.Value,Integer)
+                command.Parameters(2).Value = CType(año_creacion.Value,Integer)
+            Else
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (peso_kg.HasValue = true) Then
+                command.Parameters(3).Value = CType(peso_kg.Value,Double)
             Else
                 command.Parameters(3).Value = Global.System.DBNull.Value
             End If
-            If (peso_kg.HasValue = true) Then
-                command.Parameters(4).Value = CType(peso_kg.Value,Double)
+            If (altura_m.HasValue = true) Then
+                command.Parameters(4).Value = CType(altura_m.Value,Double)
             Else
                 command.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (altura_m.HasValue = true) Then
-                command.Parameters(5).Value = CType(altura_m.Value,Double)
-            Else
-                command.Parameters(5).Value = Global.System.DBNull.Value
-            End If
             If (Color Is Nothing) Then
-                command.Parameters(6).Value = Global.System.DBNull.Value
+                command.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(6).Value = CType(Color,String)
+                command.Parameters(5).Value = CType(Color,String)
             End If
+            command.Parameters(6).Value = CType(id,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then

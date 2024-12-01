@@ -72,6 +72,12 @@ Public Class Plantilla_preview
     Private Sub Plantilla_preview_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
         Label1.Text = "Seleccionado"
         Administrado_1.form_selec_id = current_id
+        Administrado_1.nom_selec_id = name_textBox.Text
+        Administrado_1.saga_selec_id = saga_TextBox.Text
+        Administrado_1.year_selec_id = Val(year_TextBox.Text)
+        Administrado_1.peso_selec_id = Val(Peso_TextBox.Text)
+        Administrado_1.altura_selec_id = Val(high_TextBox.Text)
+        Administrado_1.color_selec_id = miColor
         Console.WriteLine(current_id)
 
     End Sub

@@ -34,6 +34,9 @@ Partial Class Registro_Pj
         Me.peso = New System.Windows.Forms.TextBox()
         Me.no = New System.Windows.Forms.Button()
         Me.accept = New System.Windows.Forms.Button()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label2
@@ -119,7 +122,7 @@ Partial Class Registro_Pj
         'no
         '
         Me.no.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.no.Location = New System.Drawing.Point(186, 383)
+        Me.no.Location = New System.Drawing.Point(186, 427)
         Me.no.Name = "no"
         Me.no.Size = New System.Drawing.Size(75, 30)
         Me.no.TabIndex = 13
@@ -128,18 +131,44 @@ Partial Class Registro_Pj
         '
         'accept
         '
-        Me.accept.Location = New System.Drawing.Point(62, 383)
+        Me.accept.Location = New System.Drawing.Point(62, 427)
         Me.accept.Name = "accept"
         Me.accept.Size = New System.Drawing.Size(76, 30)
         Me.accept.TabIndex = 12
         Me.accept.Text = "Aceptar"
         Me.accept.UseVisualStyleBackColor = True
         '
+        'ColorDialog1
+        '
+        Me.ColorDialog1.FullOpen = True
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Location = New System.Drawing.Point(124, 359)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(77, 47)
+        Me.Panel1.TabIndex = 15
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.SystemColors.Control
+        Me.Label1.Cursor = System.Windows.Forms.Cursors.No
+        Me.Label1.Location = New System.Drawing.Point(138, 331)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 16)
+        Me.Label1.TabIndex = 16
+        Me.Label1.Text = "Color"
+        '
         'Registro_Pj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(336, 425)
+        Me.ClientSize = New System.Drawing.Size(335, 469)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.no)
         Me.Controls.Add(Me.accept)
         Me.Controls.Add(Me.Label6)
@@ -172,4 +201,7 @@ Partial Class Registro_Pj
     Friend WithEvents peso As TextBox
     Friend WithEvents no As Button
     Friend WithEvents accept As Button
+    Friend WithEvents ColorDialog1 As ColorDialog
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label1 As Label
 End Class

@@ -1,7 +1,13 @@
 ﻿Public Class Administrado_1
     Private currentchildform As Form
     Public info_man As New Info_manager
-    Public Shared form_selec_id As Integer
+    Public Shared form_selec_id As Integer = 0
+    Public Shared nom_selec_id As String
+    Public Shared saga_selec_id As String
+    Public Shared year_selec_id As Integer
+    Public Shared peso_selec_id As Double
+    Public Shared altura_selec_id As Double
+    Public Shared color_selec_id As Color
 
 
     Private Sub OpenChildForm(childForm As Form)
@@ -57,15 +63,18 @@
     End Sub
 
     Private Sub borrar(sender As Object, e As EventArgs) Handles IconButton2.Click
+        If form_selec_id <> 0 Then
 
-        Alert_box.Alertar(
+            Alert_box.Alertar(
             "Vas a borrar un registro. " & vbCrLf & "Estas seguro?",
             Sub()
                 Plantilla_preview.PersonajesTableAdapter1.Borrar_Pj(form_selec_id)
                 Console.WriteLine("hola que hacen" & form_selec_id)
                 actualizar()
             End Sub)
-
+        Else
+            MsgBox("Selecciona un registro primero!")
+        End If
     End Sub
 
     Private Sub Administrado_1_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
@@ -75,5 +84,15 @@
 
     Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
         actualizar()
+    End Sub
+
+    Private Sub Update_pj(sender As Object, e As EventArgs) Handles IconButton4.Click
+        If form_selec_id <> 0 Then
+
+            actualizar_pj.Show()
+            'sexooooooooooooooooo!
+        Else
+            MsgBox("Selecciona un registro primero!")
+        End If
     End Sub
 End Class
