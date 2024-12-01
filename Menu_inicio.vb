@@ -73,17 +73,26 @@ Public Class Menu_inicio
     End Sub
 
 
-    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
+    Private Sub usuario(sender As Object, e As EventArgs) Handles IconButton2.Click
         ActivateButton(sender, Color.Lime)
+        If currentchildform IsNot Nothing Then
+            currentchildform.Close()
+        End If
     End Sub
 
-    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+    Private Sub admin(sender As Object, e As EventArgs) Handles IconButton1.Click
         ActivateButton(sender, Color.Yellow)
+        If currentchildform IsNot Nothing Then
+            currentchildform.Close()
+        End If
         OpenChildForm(New Administrado_1)
     End Sub
 
-    Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
+    Private Sub salir(sender As Object, e As EventArgs) Handles IconButton3.Click
         ActivateButton(sender, Color.Red)
+        If currentchildform IsNot Nothing Then
+            currentchildform.Close()
+        End If
     End Sub
 
     Private Sub Menu_inicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -92,7 +101,7 @@ Public Class Menu_inicio
 
     End Sub
 
-    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+    Private Sub inicio(sender As Object, e As EventArgs) Handles IconButton4.Click
         ActivateButton(sender, Color.Purple)
         If currentchildform IsNot Nothing Then
             currentchildform.Close()

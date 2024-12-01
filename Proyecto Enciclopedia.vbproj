@@ -126,6 +126,12 @@
       <DependentUpon>Administrado_1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Alert_box.Designer.vb">
+      <DependentUpon>Alert_box.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alert_box.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Info_manager.vb" />
     <Compile Include="mashDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -160,10 +166,19 @@
     <Compile Include="Plantilla_preview.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Registro_Pj.Designer.vb">
+      <DependentUpon>Registro_Pj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registro_Pj.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Administrado_1.resx">
       <DependentUpon>Administrado_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alert_box.resx">
+      <DependentUpon>Alert_box.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_inicio.resx">
       <DependentUpon>Menu_inicio.vb</DependentUpon>
@@ -176,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Plantilla_preview.resx">
       <DependentUpon>Plantilla_preview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro_Pj.resx">
+      <DependentUpon>Registro_Pj.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

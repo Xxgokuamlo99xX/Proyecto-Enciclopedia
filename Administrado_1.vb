@@ -1,15 +1,10 @@
 ﻿Public Class Administrado_1
     Private currentchildform As Form
-    Private info_man As New Info_manager
+    Public info_man As New Info_manager
+    Public Shared form_selec_id As Integer
 
 
     Private Sub OpenChildForm(childForm As Form)
-        ' Open only form
-        ' If currentchildform IsNot Nothing Then
-        '     currentchildform.Close()
-        ' End If
-        'currentchildform = childForm
-        ' End
 
         childForm.TopLevel = False
         childForm.FormBorderStyle = FormBorderStyle.None
@@ -22,6 +17,7 @@
     End Sub
 
     Private Sub Administrado_1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         Panel_plantilla.AutoScroll = True
         For i As Integer = info_man.id_getter() - 1 To 0 Step -1
 
@@ -29,6 +25,55 @@
 
         Next
 
+    End Sub
 
+    Public Sub actualizar()
+        CerrarFormasEnPanel(Panel_plantilla)
+        For i As Integer = info_man.id_getter() - 1 To 0 Step -1
+
+            OpenChildForm(New Plantilla_preview)
+
+        Next
+    End Sub
+    Private Sub CerrarFormasEnPanel(panel As Panel)
+        Plantilla_preview.ReiniciarContador()
+        For Each control As Control In panel.Controls
+
+            If TypeOf control Is Form Then
+                Dim formaIncrustada As Form = CType(control, Form)
+                If Not formaIncrustada.IsDisposed Then
+                    formaIncrustada.Close()
+                End If
+            End If
+        Next
+
+
+        panel.Controls.Clear()
+    End Sub
+
+    Private Sub Agregar(sender As Object, e As EventArgs) Handles IconButton1.Click
+        Registro_Pj.Show()
+
+    End Sub
+
+    Private Sub borrar(sender As Object, e As EventArgs) Handles IconButton2.Click
+
+        Alert_box.Alertar(
+            "Vas a borrar un registro. " & vbCrLf & "Estas seguro?",
+            Sub()
+                Plantilla_preview.PersonajesTableAdapter1.Borrar_Pj(form_selec_id)
+                Console.WriteLine("hola que hacen" & form_selec_id)
+                actualizar()
+            End Sub)
+
+    End Sub
+
+    Private Sub Administrado_1_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        CerrarFormasEnPanel(Panel_plantilla)
+
+    End Sub
+
+    Private Sub IconButton3_Click(sender As Object, e As EventArgs) Handles IconButton3.Click
+        actualizar()
     End Sub
 End Class

@@ -1,9 +1,16 @@
-﻿Public Class Plantilla_preview
+﻿Imports FontAwesome.Sharp
+
+Public Class Plantilla_preview
 
     Public Shared ContadorInstancias As Integer = -1
 
     Public Property current_id As Integer
     Private color_plantilla As String
+    Private rojo As Integer
+    Private verde As Integer
+    Private azul As Integer
+
+    Private miColor As Color = Color.FromArgb(rojo, verde, azul)
 
 
     Public Sub New()
@@ -27,21 +34,50 @@
 
     Private Sub Plantilla_preview_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim rgb As String = Me.PersonajesTableAdapter1.get_color(current_id)
-        Dim valores() As String = rgb.Split(","c)
+        Dim valores() As String
+        If Not rgb = "" Then
+            valores = rgb.Split(","c)
+            rojo = Convert.ToInt32(valores(0))
+            verde = Convert.ToInt32(valores(1))
+            azul = Convert.ToInt32(valores(2))
+        Else
+            rojo = 0
+            verde = 0
+            azul = 0
+        End If
 
-        Dim rojo As Integer = Convert.ToInt32(valores(0))
-        Dim verde As Integer = Convert.ToInt32(valores(1))
-        Dim azul As Integer = Convert.ToInt32(valores(2))
 
+        miColor = Color.FromArgb(rojo, verde, azul)
 
-        Dim miColor As Color = Color.FromArgb(rojo, verde, azul)
         CambiarColorControles(Me, miColor)
+
+        asignar_val()
+
+        Label1.Text = ""
+
+    End Sub
+    Private Sub asignar_val()
         Id_TextBox.Text = Me.PersonajesTableAdapter1.get_id(current_id)
         name_textBox.Text = Me.PersonajesTableAdapter1.get_nombre(current_id)
         saga_TextBox.Text = Me.PersonajesTableAdapter1.get_saga(current_id)
         year_TextBox.Text = Me.PersonajesTableAdapter1.get_year(current_id)
         Peso_TextBox.Text = Me.PersonajesTableAdapter1.get_peso(current_id)
         high_TextBox.Text = Me.PersonajesTableAdapter1.get_altura(current_id)
+    End Sub
+
+    Public Shared Sub ReiniciarContador()
+        ContadorInstancias = 0 ' Reinicia a 0, eliminando el estado nulo
+    End Sub
+
+    Private Sub Plantilla_preview_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
+        Label1.Text = "Seleccionado"
+        Administrado_1.form_selec_id = current_id
+        Console.WriteLine(current_id)
+
+    End Sub
+
+    Private Sub Plantilla_preview_Leave(sender As Object, e As EventArgs) Handles MyBase.Leave
+        Label1.Text = ""
 
     End Sub
 End Class

@@ -31,6 +31,7 @@ Partial Class Administrado_1
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Panel_plantilla = New System.Windows.Forms.Panel()
+        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -103,17 +104,18 @@ Partial Class Administrado_1
         '
         Me.Panel2.Controls.Add(Me.IconButton2)
         Me.Panel2.Controls.Add(Me.IconButton1)
+        Me.Panel2.Controls.Add(Me.IconButton3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(1086, 0)
+        Me.Panel2.Location = New System.Drawing.Point(956, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(57, 102)
+        Me.Panel2.Size = New System.Drawing.Size(187, 102)
         Me.Panel2.TabIndex = 0
         '
         'IconButton2
         '
         Me.IconButton2.AutoSize = True
-        Me.IconButton2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.IconButton2.Dock = System.Windows.Forms.DockStyle.Left
         Me.IconButton2.FlatAppearance.BorderSize = 0
         Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IconButton2.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.0!)
@@ -121,17 +123,17 @@ Partial Class Administrado_1
         Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.Trash
         Me.IconButton2.IconColor = System.Drawing.Color.White
         Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.Location = New System.Drawing.Point(0, 48)
+        Me.IconButton2.Location = New System.Drawing.Point(114, 0)
         Me.IconButton2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(57, 54)
+        Me.IconButton2.Size = New System.Drawing.Size(75, 102)
         Me.IconButton2.TabIndex = 1
         Me.IconButton2.UseVisualStyleBackColor = True
         '
         'IconButton1
         '
         Me.IconButton1.AutoSize = True
-        Me.IconButton1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.IconButton1.Dock = System.Windows.Forms.DockStyle.Left
         Me.IconButton1.FlatAppearance.BorderSize = 0
         Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IconButton1.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.0!)
@@ -139,10 +141,10 @@ Partial Class Administrado_1
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Plus
         Me.IconButton1.IconColor = System.Drawing.Color.White
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid
-        Me.IconButton1.Location = New System.Drawing.Point(0, 0)
+        Me.IconButton1.Location = New System.Drawing.Point(57, 0)
         Me.IconButton1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(57, 54)
+        Me.IconButton1.Size = New System.Drawing.Size(57, 102)
         Me.IconButton1.TabIndex = 0
         Me.IconButton1.UseVisualStyleBackColor = True
         '
@@ -156,6 +158,24 @@ Partial Class Administrado_1
         Me.Panel_plantilla.Name = "Panel_plantilla"
         Me.Panel_plantilla.Size = New System.Drawing.Size(1143, 515)
         Me.Panel_plantilla.TabIndex = 1
+        '
+        'IconButton3
+        '
+        Me.IconButton3.AutoSize = True
+        Me.IconButton3.Dock = System.Windows.Forms.DockStyle.Left
+        Me.IconButton3.FlatAppearance.BorderSize = 0
+        Me.IconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton3.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.0!)
+        Me.IconButton3.ForeColor = System.Drawing.Color.White
+        Me.IconButton3.IconChar = FontAwesome.Sharp.IconChar.Redo
+        Me.IconButton3.IconColor = System.Drawing.Color.White
+        Me.IconButton3.IconFont = FontAwesome.Sharp.IconFont.Solid
+        Me.IconButton3.Location = New System.Drawing.Point(0, 0)
+        Me.IconButton3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.IconButton3.Name = "IconButton3"
+        Me.IconButton3.Size = New System.Drawing.Size(57, 102)
+        Me.IconButton3.TabIndex = 2
+        Me.IconButton3.UseVisualStyleBackColor = True
         '
         'Administrado_1
         '
@@ -186,4 +206,5 @@ Partial Class Administrado_1
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel_plantilla As Panel
+    Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
 End Class
