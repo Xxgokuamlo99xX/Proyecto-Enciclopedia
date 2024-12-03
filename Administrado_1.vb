@@ -1,5 +1,6 @@
 ﻿Public Class Administrado_1
     Private currentchildform As Form
+    Private filter_idex As Integer = 0
     Public info_man As New Info_manager
     Public Shared form_selec_id As Integer = 0
     Public Shared nom_selec_id As String
@@ -23,7 +24,7 @@
     End Sub
 
     Private Sub Administrado_1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        ComboBox1.SelectedIndex = 0
         Panel_plantilla.AutoScroll = True
         For i As Integer = info_man.id_getter() - 1 To 0 Step -1
 
@@ -98,11 +99,11 @@
     End Sub
 
     Private Sub Busqueda(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-        filtrar()
+        filtrar(filter_idex)
 
     End Sub
 
-    Private Sub filtrar() 'NO MOVER FUNCIONA Y NO SE PORQUE!!!!!
+    Private Sub filtrar(filtro As Integer) 'NO MOVER FUNCIONA Y NO SE PORQUE!!!!!
         Dim tieneCoincidenciaCompleta As Boolean = False
         Dim formularioCoincidenciaCompleta As Plantilla_preview = Nothing
         Dim busqueda As String = TextBox1.Text
@@ -112,7 +113,17 @@
         For Each control As Control In Panel_plantilla.Controls
             If TypeOf control Is Plantilla_preview Then
                 Dim form As Plantilla_preview = CType(control, Plantilla_preview)
-                Dim palabra As String = form.name_textBox.Text.ToLower()
+                Dim palabra As String
+                Select Case filtro
+                    Case 0
+                        palabra = form.name_textBox.Text.ToLower()
+                    Case 1
+                        palabra = form.saga_TextBox.Text.ToLower()
+                    Case 2
+                        palabra = form.Peso_TextBox.Text.ToLower()
+                    Case 3
+                        palabra = form.year_TextBox.Text.ToLower()
+                End Select
                 Dim coincidencias As Integer = 0
 
                 ' Contar coincidencias
@@ -164,5 +175,9 @@
 
         End If
 
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        filter_idex = ComboBox1.SelectedIndex
     End Sub
 End Class
