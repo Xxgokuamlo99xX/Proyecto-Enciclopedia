@@ -31,6 +31,7 @@
 
         Next
 
+
     End Sub
 
     Public Sub actualizar()
@@ -94,5 +95,74 @@
         Else
             MsgBox("Selecciona un registro primero!")
         End If
+    End Sub
+
+    Private Sub Busqueda(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        filtrar()
+
+    End Sub
+
+    Private Sub filtrar() 'NO MOVER FUNCIONA Y NO SE PORQUE!!!!!
+        Dim tieneCoincidenciaCompleta As Boolean = False
+        Dim formularioCoincidenciaCompleta As Plantilla_preview = Nothing
+        Dim busqueda As String = TextBox1.Text
+        ' Crear una lista para almacenar los formularios y sus coincidencias
+        Dim listaFormularios As New List(Of Tuple(Of Plantilla_preview, Integer))()
+
+        For Each control As Control In Panel_plantilla.Controls
+            If TypeOf control Is Plantilla_preview Then
+                Dim form As Plantilla_preview = CType(control, Plantilla_preview)
+                Dim palabra As String = form.name_textBox.Text.ToLower()
+                Dim coincidencias As Integer = 0
+
+                ' Contar coincidencias
+                For Each letra As Char In palabra
+                    If busqueda.Contains(letra) Then
+                        coincidencias += 1
+                    End If
+                Next
+
+                ' Verificar si es una coincidencia completa
+                If coincidencias = palabra.Length AndAlso palabra.Length = busqueda.Length Then
+                    tieneCoincidenciaCompleta = True
+                    formularioCoincidenciaCompleta = form
+                    Exit For ' No es necesario seguir buscando
+                End If
+
+                ' Agregar a la lista para coincidencias parciales
+                listaFormularios.Add(New Tuple(Of Plantilla_preview, Integer)(form, coincidencias))
+            End If
+
+        Next
+
+        If tieneCoincidenciaCompleta Then
+            ' Mostrar solo el formulario con coincidencia completa
+            For Each control As Control In Panel_plantilla.Controls
+                If TypeOf control Is Plantilla_preview Then
+                    Dim form As Plantilla_preview = CType(control, Plantilla_preview)
+                    form.Visible = (form Is formularioCoincidenciaCompleta)
+                End If
+                If busqueda = "" Then
+                    control.Show()
+                End If
+            Next
+        Else
+            ' Mostrar formularios con coincidencias parciales ordenados por relevancia
+            listaFormularios = listaFormularios.OrderByDescending(Function(x) x.Item2).ToList()
+
+            For Each item In listaFormularios
+                Dim form As Plantilla_preview = item.Item1
+                Dim coincidencias As Integer = item.Item2
+
+                ' Mostrar formularios con coincidencias
+                form.Visible = coincidencias > 0
+                If busqueda = "" Then
+                    form.Show()
+                End If
+            Next
+
+
+        End If
+
     End Sub
 End Class
