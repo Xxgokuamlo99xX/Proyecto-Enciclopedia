@@ -82,7 +82,7 @@ Public Class actualizar_pj
         alt.Text = Administrado_1.altura_selec_id
         Panel1.BackColor = Administrado_1.color_selec_id
 
-        color_panel = cambiar_color()
+
     End Sub
 
     Private Sub Panel1_Click(sender As Object, e As EventArgs) Handles Panel1.Click

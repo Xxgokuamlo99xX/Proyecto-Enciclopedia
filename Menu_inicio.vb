@@ -85,7 +85,7 @@ Public Class Menu_inicio
         If currentchildform IsNot Nothing Then
             currentchildform.Close()
         End If
-        OpenChildForm(New Administrado_1)
+        Inicio_sesion.Show()
     End Sub
 
     Private Sub salir(sender As Object, e As EventArgs) Handles IconButton3.Click
@@ -109,5 +109,10 @@ Public Class Menu_inicio
 
     End Sub
 
+
+    Public Sub abrir_admin()
+        OpenChildForm(New Administrado_1)
+
+    End Sub
 
 End Class
