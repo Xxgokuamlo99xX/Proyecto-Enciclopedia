@@ -22,24 +22,12 @@ Partial Class Alert_box
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 31)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Aviso"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Button1
         '
@@ -61,11 +49,22 @@ Partial Class Alert_box
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.RichTextBox1)
         Me.Panel1.Location = New System.Drawing.Point(12, 9)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(438, 114)
         Me.Panel1.TabIndex = 3
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox1.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 28.0!)
+        Me.RichTextBox1.Location = New System.Drawing.Point(3, 3)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(432, 108)
+        Me.RichTextBox1.TabIndex = 1
+        Me.RichTextBox1.Text = "AVISOACVHJI"
         '
         'Alert_box
         '
@@ -78,15 +77,13 @@ Partial Class Alert_box
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Alert_box"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Alert_box"
+        Me.Text = "1"
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class

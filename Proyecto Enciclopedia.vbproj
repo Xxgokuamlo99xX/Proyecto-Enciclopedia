@@ -77,6 +77,9 @@
   <PropertyGroup>
     <SignManifests>false</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\pixel-art-book-icon-png.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -92,6 +95,9 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Siticone.Desktop.UI, Version=2.1.1.0, Culture=neutral, PublicKeyToken=9683591576b7f0b4, processorArchitecture=MSIL">
+      <HintPath>packages\Siticone.Desktop.UI.2.1.1\lib\net40\Siticone.Desktop.UI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -119,30 +125,41 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="actualizar_pj.Designer.vb">
+    <Compile Include="Administrador\actualizar_pj.Designer.vb">
       <DependentUpon>actualizar_pj.vb</DependentUpon>
     </Compile>
-    <Compile Include="actualizar_pj.vb">
+    <Compile Include="Administrador\actualizar_pj.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrado_1.vb">
+    <Compile Include="Administrador\Administrado_1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrado_1.Designer.vb">
+    <Compile Include="Administrador\Administrado_1.Designer.vb">
       <DependentUpon>Administrado_1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alert_box.Designer.vb">
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utiles\Alert_box.Designer.vb">
       <DependentUpon>Alert_box.vb</DependentUpon>
     </Compile>
-    <Compile Include="Alert_box.vb">
+    <Compile Include="Utiles\Alert_box.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Info_manager.vb" />
-    <Compile Include="Inicio_sesion.Designer.vb">
+    <Compile Include="Nomal\Usuario.Designer.vb">
+      <DependentUpon>Usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Nomal\Usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utiles\Info_manager.vb" />
+    <Compile Include="Utiles\Inicio_sesion.Designer.vb">
       <DependentUpon>Inicio_sesion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Inicio_sesion.vb">
+    <Compile Include="Utiles\Inicio_sesion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="mashDataSet.Designer.vb">
@@ -153,10 +170,10 @@
     <Compile Include="mashDataSet.vb">
       <DependentUpon>mashDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Menu_inicio.Designer.vb">
+    <Compile Include="Nomal\Menu_inicio.Designer.vb">
       <DependentUpon>Menu_inicio.vb</DependentUpon>
     </Compile>
-    <Compile Include="Menu_inicio.vb">
+    <Compile Include="Nomal\Menu_inicio.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -165,56 +182,63 @@
       <DependentUpon>Application.myapp</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Plantilla_preview.Designer.vb">
+    <Compile Include="Nomal\Plantilla_preview.Designer.vb">
       <DependentUpon>Plantilla_preview.vb</DependentUpon>
     </Compile>
-    <Compile Include="Plantilla_preview.vb">
+    <Compile Include="Nomal\Plantilla_preview.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registro_Pj.Designer.vb">
+    <Compile Include="Administrador\Registro_Pj.Designer.vb">
       <DependentUpon>Registro_Pj.vb</DependentUpon>
     </Compile>
-    <Compile Include="Registro_Pj.vb">
+    <Compile Include="Administrador\Registro_Pj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utiles\Pantalla_de_carga.Designer.vb">
+      <DependentUpon>Pantalla_de_carga.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Utiles\Pantalla_de_carga.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="actualizar_pj.resx">
+    <EmbeddedResource Include="Administrador\actualizar_pj.resx">
       <DependentUpon>actualizar_pj.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrado_1.resx">
+    <EmbeddedResource Include="Administrador\Administrado_1.resx">
       <DependentUpon>Administrado_1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alert_box.resx">
+    <EmbeddedResource Include="Utiles\Alert_box.resx">
       <DependentUpon>Alert_box.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio_sesion.resx">
+    <EmbeddedResource Include="Nomal\Usuario.resx">
+      <DependentUpon>Usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utiles\Inicio_sesion.resx">
       <DependentUpon>Inicio_sesion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_inicio.resx">
+    <EmbeddedResource Include="Nomal\Menu_inicio.resx">
       <DependentUpon>Menu_inicio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Plantilla_preview.resx">
+    <EmbeddedResource Include="Nomal\Plantilla_preview.resx">
       <DependentUpon>Plantilla_preview.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registro_Pj.resx">
+    <EmbeddedResource Include="Administrador\Registro_Pj.resx">
       <DependentUpon>Registro_Pj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utiles\Pantalla_de_carga.resx">
+      <DependentUpon>Pantalla_de_carga.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -317,6 +341,12 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Imagen de WhatsApp 2024-01-03 a las 17.51.47_d6aaf53f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\pixel-art-book-icon-png.ico" />
+    <None Include="Resources\fondo de pantalla 2.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
