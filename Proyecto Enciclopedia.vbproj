@@ -151,6 +151,7 @@
     </Compile>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Nomal\Usuario.Designer.vb">
       <DependentUpon>Usuario.vb</DependentUpon>
     </Compile>
@@ -170,6 +171,9 @@
 =======
     <Compile Include="Info_manager.vb" />
 >>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
+=======
+    <Compile Include="Info_manager.vb" />
+>>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
     <Compile Include="mashDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -177,11 +181,14 @@
     </Compile>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="mashDataSet.vb">
       <DependentUpon>mashDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Nomal\Menu_inicio.Designer.vb">
 =======
+=======
+>>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
 =======
 >>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
     <Compile Include="Menu_inicio.Designer.vb">
@@ -233,6 +240,7 @@
     </EmbeddedResource>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <EmbeddedResource Include="Nomal\Usuario.resx">
       <DependentUpon>Usuario.vb</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +249,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nomal\Menu_inicio.resx">
 =======
+=======
+>>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
 =======
 >>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
     <EmbeddedResource Include="Menu_inicio.resx">
