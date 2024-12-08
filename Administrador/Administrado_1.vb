@@ -103,7 +103,7 @@
 
     End Sub
 
-    Private Sub filtrar(filtro As Integer) 'NO MOVER, FUNCIONA Y NO SE PORQUE!!!!!
+    Private Sub filtrar(filtro As Integer) 'NO MOVER FUNCIONA Y NO SE PORQUE!!!!!
         Dim tieneCoincidenciaCompleta As Boolean = False
         Dim formularioCoincidenciaCompleta As Plantilla_preview = Nothing
         Dim busqueda As String = TextBox1.Text

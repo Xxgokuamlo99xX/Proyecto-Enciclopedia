@@ -149,6 +149,7 @@
     <Compile Include="Utiles\Alert_box.vb">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Nomal\Usuario.Designer.vb">
       <DependentUpon>Usuario.vb</DependentUpon>
     </Compile>
@@ -162,15 +163,22 @@
     <Compile Include="Utiles\Inicio_sesion.vb">
       <SubType>Form</SubType>
     </Compile>
+=======
+    <Compile Include="Info_manager.vb" />
+>>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
     <Compile Include="mashDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>mashDataSet.xsd</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="mashDataSet.vb">
       <DependentUpon>mashDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Nomal\Menu_inicio.Designer.vb">
+=======
+    <Compile Include="Menu_inicio.Designer.vb">
+>>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
       <DependentUpon>Menu_inicio.vb</DependentUpon>
     </Compile>
     <Compile Include="Nomal\Menu_inicio.vb">
@@ -216,6 +224,7 @@
     <EmbeddedResource Include="Utiles\Alert_box.resx">
       <DependentUpon>Alert_box.vb</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Nomal\Usuario.resx">
       <DependentUpon>Usuario.vb</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +232,9 @@
       <DependentUpon>Inicio_sesion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nomal\Menu_inicio.resx">
+=======
+    <EmbeddedResource Include="Menu_inicio.resx">
+>>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
       <DependentUpon>Menu_inicio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">

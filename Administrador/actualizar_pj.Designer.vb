@@ -158,10 +158,6 @@ Partial Class actualizar_pj
         Me.nombre.Size = New System.Drawing.Size(151, 22)
         Me.nombre.TabIndex = 17
         '
-        'ColorDialog1
-        '
-        Me.ColorDialog1.FullOpen = True
-        '
         'actualizar_pj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
