@@ -95,9 +95,6 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="Siticone.Desktop.UI, Version=2.1.1.0, Culture=neutral, PublicKeyToken=9683591576b7f0b4, processorArchitecture=MSIL">
-      <HintPath>packages\Siticone.Desktop.UI.2.1.1\lib\net40\Siticone.Desktop.UI.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -149,9 +146,6 @@
     <Compile Include="Utiles\Alert_box.vb">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Compile Include="Nomal\Usuario.Designer.vb">
       <DependentUpon>Usuario.vb</DependentUpon>
     </Compile>
@@ -165,34 +159,15 @@
     <Compile Include="Utiles\Inicio_sesion.vb">
       <SubType>Form</SubType>
     </Compile>
-=======
-    <Compile Include="Info_manager.vb" />
->>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
-=======
-    <Compile Include="Info_manager.vb" />
->>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
-=======
-    <Compile Include="Info_manager.vb" />
->>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
     <Compile Include="mashDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>mashDataSet.xsd</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Compile Include="mashDataSet.vb">
       <DependentUpon>mashDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Nomal\Menu_inicio.Designer.vb">
-=======
-=======
->>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
-=======
->>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
-    <Compile Include="Menu_inicio.Designer.vb">
->>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
       <DependentUpon>Menu_inicio.vb</DependentUpon>
     </Compile>
     <Compile Include="Nomal\Menu_inicio.vb">
@@ -238,9 +213,6 @@
     <EmbeddedResource Include="Utiles\Alert_box.resx">
       <DependentUpon>Alert_box.vb</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <EmbeddedResource Include="Nomal\Usuario.resx">
       <DependentUpon>Usuario.vb</DependentUpon>
     </EmbeddedResource>
@@ -248,13 +220,6 @@
       <DependentUpon>Inicio_sesion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nomal\Menu_inicio.resx">
-=======
-=======
->>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
-=======
->>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
-    <EmbeddedResource Include="Menu_inicio.resx">
->>>>>>> parent of 55b5c22 (antes de una posible catastrofe)
       <DependentUpon>Menu_inicio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">

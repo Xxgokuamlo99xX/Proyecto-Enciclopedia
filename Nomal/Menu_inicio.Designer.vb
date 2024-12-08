@@ -30,15 +30,15 @@ Partial Class Menu_inicio
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PanelDesktop = New System.Windows.Forms.Panel()
-        Me.MashDataSet1 = New Proyecto_Enciclopedia.mashDataSet()
-        Me.Panelmenu = New Siticone.Desktop.UI.Winforms.SiticoneGradientPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.MashDataSet1 = New Proyecto_Enciclopedia.mashDataSet()
+        Me.Panelmenu = New System.Windows.Forms.Panel()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDesktop.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MashDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panelmenu.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'IconButton3
@@ -57,7 +57,7 @@ Partial Class Menu_inicio
         Me.IconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.IconButton3.Location = New System.Drawing.Point(0, 460)
         Me.IconButton3.Name = "IconButton3"
-        Me.IconButton3.Size = New System.Drawing.Size(204, 101)
+        Me.IconButton3.Size = New System.Drawing.Size(200, 101)
         Me.IconButton3.TabIndex = 3
         Me.IconButton3.Text = "Salir"
         Me.IconButton3.UseVisualStyleBackColor = False
@@ -78,7 +78,7 @@ Partial Class Menu_inicio
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.IconButton1.Location = New System.Drawing.Point(0, 359)
         Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(204, 101)
+        Me.IconButton1.Size = New System.Drawing.Size(200, 101)
         Me.IconButton1.TabIndex = 1
         Me.IconButton1.Text = "Administrador"
         Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -100,7 +100,7 @@ Partial Class Menu_inicio
         Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.IconButton2.Location = New System.Drawing.Point(0, 258)
         Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(204, 101)
+        Me.IconButton2.Size = New System.Drawing.Size(200, 101)
         Me.IconButton2.TabIndex = 2
         Me.IconButton2.Text = "Usuario"
         Me.IconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -123,7 +123,7 @@ Partial Class Menu_inicio
         Me.IconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.IconButton4.Location = New System.Drawing.Point(0, 157)
         Me.IconButton4.Name = "IconButton4"
-        Me.IconButton4.Size = New System.Drawing.Size(204, 101)
+        Me.IconButton4.Size = New System.Drawing.Size(200, 101)
         Me.IconButton4.TabIndex = 4
         Me.IconButton4.Text = "Inicio"
         Me.IconButton4.UseVisualStyleBackColor = False
@@ -135,7 +135,7 @@ Partial Class Menu_inicio
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(204, 157)
+        Me.Panel2.Size = New System.Drawing.Size(200, 157)
         Me.Panel2.TabIndex = 0
         '
         'PictureBox2
@@ -145,7 +145,7 @@ Partial Class Menu_inicio
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(204, 157)
+        Me.PictureBox2.Size = New System.Drawing.Size(200, 157)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
@@ -153,13 +153,25 @@ Partial Class Menu_inicio
         'PanelDesktop
         '
         Me.PanelDesktop.AutoSize = True
-        Me.PanelDesktop.BackColor = System.Drawing.Color.Navy
+        Me.PanelDesktop.BackColor = System.Drawing.Color.SkyBlue
         Me.PanelDesktop.Controls.Add(Me.PictureBox1)
         Me.PanelDesktop.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelDesktop.Location = New System.Drawing.Point(0, 0)
+        Me.PanelDesktop.Location = New System.Drawing.Point(200, 0)
         Me.PanelDesktop.Name = "PanelDesktop"
-        Me.PanelDesktop.Size = New System.Drawing.Size(1141, 586)
+        Me.PanelDesktop.Size = New System.Drawing.Size(941, 586)
         Me.PanelDesktop.TabIndex = 1
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.Image = Global.Proyecto_Enciclopedia.My.Resources.Resources.fondo_de_pantalla_2
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(941, 586)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'MashDataSet1
         '
@@ -168,28 +180,17 @@ Partial Class Menu_inicio
         '
         'Panelmenu
         '
+        Me.Panelmenu.BackColor = System.Drawing.Color.Black
         Me.Panelmenu.Controls.Add(Me.IconButton3)
         Me.Panelmenu.Controls.Add(Me.IconButton1)
         Me.Panelmenu.Controls.Add(Me.IconButton2)
         Me.Panelmenu.Controls.Add(Me.IconButton4)
         Me.Panelmenu.Controls.Add(Me.Panel2)
         Me.Panelmenu.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panelmenu.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Panelmenu.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Panelmenu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.Panelmenu.Location = New System.Drawing.Point(0, 0)
         Me.Panelmenu.Name = "Panelmenu"
-        Me.Panelmenu.Size = New System.Drawing.Size(204, 586)
+        Me.Panelmenu.Size = New System.Drawing.Size(200, 586)
         Me.Panelmenu.TabIndex = 2
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1141, 586)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'Menu_inicio
         '
@@ -197,8 +198,8 @@ Partial Class Menu_inicio
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1141, 586)
-        Me.Controls.Add(Me.Panelmenu)
         Me.Controls.Add(Me.PanelDesktop)
+        Me.Controls.Add(Me.Panelmenu)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -208,10 +209,10 @@ Partial Class Menu_inicio
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelDesktop.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MashDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panelmenu.ResumeLayout(False)
         Me.Panelmenu.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -224,6 +225,6 @@ Partial Class Menu_inicio
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
     Friend WithEvents MashDataSet1 As mashDataSet
-    Friend WithEvents Panelmenu As Siticone.Desktop.UI.Winforms.SiticoneGradientPanel
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Panelmenu As Panel
 End Class

@@ -4,7 +4,6 @@ Imports System.IO
 Imports WMPLib
 Imports System.Data.SqlClient
 
-
 Public Class Menu_inicio
     Private currentBtn As IconButton
     Private leftborderBtn As Panel
