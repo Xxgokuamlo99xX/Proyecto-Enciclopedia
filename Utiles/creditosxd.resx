@@ -117,7 +117,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>Créditos 
+Desarrollador Principal:
+Ethianne Alvarado
+
+Diseño de Interfaz de Usuario (UI):
+Ethianne Alvarado
+
+Experiencia de Usuario (UX):
+Ethianne Alvarado
+
+Programación Back-End:
+Ethianne Alvarado
+
+Programación Front-End:
+Ethianne Alvarado
+
+Desarrollo de Algoritmos:
+Ethianne Alvarado
+
+Testing y Debugging:
+Ethianne Alvarado
+
+Diseño Gráfico:
+Ethianne Alvarado
+
+Documentación:
+Ethianne Alvarado
+
+Soporte Técnico:
+Ethianne Alvarado
+
+Gestión del Proyecto:
+Ethianne Alvarado
+
+Marketing y Publicidad:
+Ethianne Alvarado
+
+Agradecimientos Especiales:
+Ethianne Alvarado, Fernando Cota y Fernando Figueroa
+
+Gracias por el apoyo moral</value>
+  </data>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
 </root>

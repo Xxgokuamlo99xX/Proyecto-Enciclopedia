@@ -3,6 +3,7 @@ Imports FontAwesome.Sharp
 Imports System.IO
 Imports WMPLib
 Imports System.Data.SqlClient
+Imports System.Drawing.Drawing2D
 
 Public Class Menu_inicio
     Private currentBtn As IconButton
@@ -107,6 +108,8 @@ Public Class Menu_inicio
         Pantalla_de_carga.Show()
         'My.Computer.Audio.Play("E:\Oscar Alvarado 510\Visual Studio\Proyecto Enciclopedia\bin\Debug\Syn-Cole-Feel-Good-_NCS-Release_.wav")
 
+
+
     End Sub
 
     Private Sub inicio(sender As Object, e As EventArgs) Handles IconButton4.Click
@@ -123,4 +126,27 @@ Public Class Menu_inicio
 
     End Sub
 
+    Private Sub Github_button_Click(sender As Object, e As EventArgs) Handles Github_button.Click
+        Dim url As String = "https://github.com/Xxgokuamlo99xX/Proyecto-Enciclopedia" 'URL a abrir
+
+        Try
+            Process.Start(New ProcessStartInfo(url) With {
+                .UseShellExecute = True
+            })
+        Catch ex As Exception
+            MessageBox.Show("No se pudo abrir el enlace. Verifica la URL.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub creditos_Button_Click(sender As Object, e As EventArgs) Handles creditos_Button.Click
+        creditosxd.Show()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Dim fecha As String = DateTime.Now.ToString("d/M/yyyy")
+        Dim hora As String = DateTime.Now.ToString("H:m:s")
+
+        fecha_lbl.Text = fecha
+        Hora_lbl.Text = hora
+    End Sub
 End Class

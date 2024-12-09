@@ -66,6 +66,7 @@ Partial Class Pantalla_de_carga
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Pantalla_de_carga"
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pantalla_de_carga"
         Me.TopMost = True

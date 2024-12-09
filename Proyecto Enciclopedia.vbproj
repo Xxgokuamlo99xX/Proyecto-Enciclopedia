@@ -135,9 +135,15 @@
       <DependentUpon>Administrado_1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="labelborder.Designer.vb">
+      <DependentUpon>labelborder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="labelborder.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Utiles\Alert_box.Designer.vb">
@@ -150,6 +156,12 @@
       <DependentUpon>Usuario.vb</DependentUpon>
     </Compile>
     <Compile Include="Nomal\Usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utiles\creditosxd.Designer.vb">
+      <DependentUpon>creditosxd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Utiles\creditosxd.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Utiles\Info_manager.vb" />
@@ -210,11 +222,17 @@
     <EmbeddedResource Include="Administrador\Administrado_1.resx">
       <DependentUpon>Administrado_1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="labelborder.resx">
+      <DependentUpon>labelborder.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Utiles\Alert_box.resx">
       <DependentUpon>Alert_box.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nomal\Usuario.resx">
       <DependentUpon>Usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utiles\creditosxd.resx">
+      <DependentUpon>creditosxd.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Utiles\Inicio_sesion.resx">
       <DependentUpon>Inicio_sesion.vb</DependentUpon>
@@ -342,6 +360,11 @@
     <None Include="Resources\Imagen de WhatsApp 2024-01-03 a las 17.51.47_d6aaf53f.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\degradado2.png" />
+    <None Include="Resources\581e7fdaca3b1730707383226ba9cf5f.jpg" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\b22300b7185af4b6f6710d02901d34a1.jpg" />
+    <None Include="Resources\3ae913d2143c423e8bc05c49d4186578.jpg" />
     <Content Include="Resources\pixel-art-book-icon-png.ico" />
     <None Include="Resources\fondo de pantalla 2.gif" />
   </ItemGroup>

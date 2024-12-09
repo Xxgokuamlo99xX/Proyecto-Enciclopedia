@@ -63,9 +63,39 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property fondo_de_pantalla_2() As System.Drawing.Bitmap
+        Friend ReadOnly Property _3ae913d2143c423e8bc05c49d4186578() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("fondo de pantalla 2", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("3ae913d2143c423e8bc05c49d4186578", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _581e7fdaca3b1730707383226ba9cf5f() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("581e7fdaca3b1730707383226ba9cf5f", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property b22300b7185af4b6f6710d02901d34a1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("b22300b7185af4b6f6710d02901d34a1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property degradado2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("degradado2", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -76,6 +106,16 @@ Namespace My.Resources
         Friend ReadOnly Property Imagen_de_WhatsApp_2024_01_03_a_las_17_51_47_d6aaf53f() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Imagen de WhatsApp 2024-01-03 a las 17.51.47_d6aaf53f", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property images() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("images", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

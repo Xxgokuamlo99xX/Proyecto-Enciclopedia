@@ -76,6 +76,7 @@ Partial Class Alert_box
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Alert_box"
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "1"
         Me.Panel1.ResumeLayout(False)

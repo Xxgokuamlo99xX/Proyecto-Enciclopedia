@@ -42,95 +42,107 @@ Partial Class Registro_Pj
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(33, 29)
+        Me.Label2.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.2!)
+        Me.Label2.Location = New System.Drawing.Point(8, 26)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(56, 16)
+        Me.Label2.Size = New System.Drawing.Size(76, 22)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Nombre"
         '
         'nombre
         '
+        Me.nombre.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 10.2!)
         Me.nombre.Location = New System.Drawing.Point(110, 26)
         Me.nombre.Name = "nombre"
-        Me.nombre.Size = New System.Drawing.Size(151, 22)
+        Me.nombre.Size = New System.Drawing.Size(151, 24)
         Me.nombre.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(48, 94)
+        Me.Label3.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.2!)
+        Me.Label3.Location = New System.Drawing.Point(23, 91)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(40, 16)
+        Me.Label3.Size = New System.Drawing.Size(54, 22)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Saga"
         '
         'saga
         '
+        Me.saga.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 10.2!)
         Me.saga.Location = New System.Drawing.Point(110, 91)
         Me.saga.Name = "saga"
-        Me.saga.Size = New System.Drawing.Size(151, 22)
+        Me.saga.Size = New System.Drawing.Size(151, 24)
         Me.saga.TabIndex = 4
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(48, 156)
+        Me.Label4.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.2!)
+        Me.Label4.Location = New System.Drawing.Point(23, 153)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(31, 16)
+        Me.Label4.Size = New System.Drawing.Size(43, 22)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Año"
         '
         'year
         '
+        Me.year.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 10.2!)
         Me.year.Location = New System.Drawing.Point(110, 153)
         Me.year.Name = "year"
-        Me.year.Size = New System.Drawing.Size(151, 22)
+        Me.year.Size = New System.Drawing.Size(151, 24)
         Me.year.TabIndex = 6
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(48, 281)
+        Me.Label6.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.2!)
+        Me.Label6.Location = New System.Drawing.Point(23, 278)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(41, 16)
+        Me.Label6.Size = New System.Drawing.Size(76, 22)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Altura"
         '
         'alt
         '
+        Me.alt.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 10.2!)
         Me.alt.Location = New System.Drawing.Point(110, 278)
         Me.alt.Name = "alt"
-        Me.alt.Size = New System.Drawing.Size(151, 22)
+        Me.alt.Size = New System.Drawing.Size(151, 24)
         Me.alt.TabIndex = 10
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(48, 216)
+        Me.Label7.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.2!)
+        Me.Label7.Location = New System.Drawing.Point(23, 213)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(39, 16)
+        Me.Label7.Size = New System.Drawing.Size(54, 22)
         Me.Label7.TabIndex = 9
         Me.Label7.Text = "Peso"
         '
         'peso
         '
+        Me.peso.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 10.2!)
         Me.peso.Location = New System.Drawing.Point(110, 213)
         Me.peso.Name = "peso"
-        Me.peso.Size = New System.Drawing.Size(151, 22)
+        Me.peso.Size = New System.Drawing.Size(151, 24)
         Me.peso.TabIndex = 8
         '
         'no
         '
         Me.no.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.no.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 10.2!)
         Me.no.Location = New System.Drawing.Point(186, 427)
         Me.no.Name = "no"
-        Me.no.Size = New System.Drawing.Size(75, 30)
+        Me.no.Size = New System.Drawing.Size(83, 30)
         Me.no.TabIndex = 13
         Me.no.Text = "Cancelar"
         Me.no.UseVisualStyleBackColor = True
         '
         'accept
         '
+        Me.accept.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 10.2!)
         Me.accept.Location = New System.Drawing.Point(62, 427)
         Me.accept.Name = "accept"
         Me.accept.Size = New System.Drawing.Size(76, 30)
@@ -146,7 +158,7 @@ Partial Class Registro_Pj
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Location = New System.Drawing.Point(124, 359)
+        Me.Panel1.Location = New System.Drawing.Point(123, 363)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(77, 47)
         Me.Panel1.TabIndex = 15
@@ -154,11 +166,12 @@ Partial Class Registro_Pj
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.Control
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Cursor = System.Windows.Forms.Cursors.No
-        Me.Label1.Location = New System.Drawing.Point(138, 331)
+        Me.Label1.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.2!)
+        Me.Label1.Location = New System.Drawing.Point(129, 338)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 16)
+        Me.Label1.Size = New System.Drawing.Size(65, 22)
         Me.Label1.TabIndex = 16
         Me.Label1.Text = "Color"
         '
@@ -166,7 +179,8 @@ Partial Class Registro_Pj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(335, 469)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(308, 472)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.no)
@@ -181,10 +195,11 @@ Partial Class Registro_Pj
         Me.Controls.Add(Me.saga)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.nombre)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Registro_Pj"
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Registro_Pj"
+        Me.Text = "Registro Personaje"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -22,6 +22,9 @@ Partial Class Administrado_1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Me.Panel_plantilla = New System.Windows.Forms.Panel()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -33,15 +36,35 @@ Partial Class Administrado_1
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
-        Me.Panel_plantilla = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
+        'Panel_plantilla
+        '
+        Me.Panel_plantilla.AutoScroll = True
+        Me.Panel_plantilla.AutoSize = True
+        Me.Panel_plantilla.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Panel_plantilla.BackgroundImage = Global.Proyecto_Enciclopedia.My.Resources.Resources.degradado2
+        Me.Panel_plantilla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel_plantilla.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel_plantilla.Location = New System.Drawing.Point(0, 102)
+        Me.Panel_plantilla.Name = "Panel_plantilla"
+        Me.Panel_plantilla.Size = New System.Drawing.Size(1143, 515)
+        Me.Panel_plantilla.TabIndex = 1
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        '
         'Panel1
         '
         Me.Panel1.AutoSize = True
-        Me.Panel1.BackColor = System.Drawing.Color.Navy
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.BackgroundImage = Global.Proyecto_Enciclopedia.My.Resources.Resources.degradado2
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -91,7 +114,7 @@ Partial Class Administrado_1
         '
         'TextBox1
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.Navy
+        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 20.0!)
         Me.TextBox1.ForeColor = System.Drawing.Color.White
@@ -103,7 +126,8 @@ Partial Class Administrado_1
         '
         'ComboBox1
         '
-        Me.ComboBox1.BackColor = System.Drawing.Color.Navy
+        Me.ComboBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(160, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox1.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 18.0!)
         Me.ComboBox1.ForeColor = System.Drawing.Color.White
@@ -117,6 +141,8 @@ Partial Class Administrado_1
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.Transparent
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel2.Controls.Add(Me.IconButton2)
         Me.Panel2.Controls.Add(Me.IconButton1)
         Me.Panel2.Controls.Add(Me.IconButton4)
@@ -201,17 +227,6 @@ Partial Class Administrado_1
         Me.IconButton3.TabIndex = 2
         Me.IconButton3.UseVisualStyleBackColor = True
         '
-        'Panel_plantilla
-        '
-        Me.Panel_plantilla.AutoScroll = True
-        Me.Panel_plantilla.AutoSize = True
-        Me.Panel_plantilla.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.Panel_plantilla.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel_plantilla.Location = New System.Drawing.Point(0, 102)
-        Me.Panel_plantilla.Name = "Panel_plantilla"
-        Me.Panel_plantilla.Size = New System.Drawing.Size(1143, 515)
-        Me.Panel_plantilla.TabIndex = 1
-        '
         'Administrado_1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -244,4 +259,5 @@ Partial Class Administrado_1
     Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
     Friend WithEvents Label3 As Label
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
 End Class

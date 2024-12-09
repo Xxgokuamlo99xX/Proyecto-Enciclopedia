@@ -1,7 +1,8 @@
 ﻿Imports FontAwesome.Sharp
 
 Public Class Plantilla_preview
-
+    'Cambiar textbox por labels xdddddddddddaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    'me voy a matar si no funciona
     Public Shared ContadorInstancias As Integer = -1
 
     Public Property current_id As Integer
@@ -29,6 +30,8 @@ Public Class Plantilla_preview
         For Each hijo As Control In control.Controls
             CambiarColorControles(hijo, color)
         Next
+
+
     End Sub
 
 
@@ -60,9 +63,9 @@ Public Class Plantilla_preview
         Id_TextBox.Text = Me.PersonajesTableAdapter1.get_id(current_id)
         name_textBox.Text = Me.PersonajesTableAdapter1.get_nombre(current_id)
         saga_TextBox.Text = Me.PersonajesTableAdapter1.get_saga(current_id)
-        year_TextBox.Text = Me.PersonajesTableAdapter1.get_year(current_id)
-        Peso_TextBox.Text = Me.PersonajesTableAdapter1.get_peso(current_id)
-        high_TextBox.Text = Me.PersonajesTableAdapter1.get_altura(current_id)
+        year_TextBox.Text = "Año: " & Me.PersonajesTableAdapter1.get_year(current_id)
+        Peso_TextBox.Text = "Peso: " & Me.PersonajesTableAdapter1.get_peso(current_id) & " Kg"
+        high_TextBox.Text = "Altura: " & Me.PersonajesTableAdapter1.get_altura(current_id) & " Mts"
     End Sub
 
     Public Shared Sub ReiniciarContador()
@@ -74,10 +77,11 @@ Public Class Plantilla_preview
         Administrado_1.form_selec_id = current_id
         Administrado_1.nom_selec_id = name_textBox.Text
         Administrado_1.saga_selec_id = saga_TextBox.Text
-        Administrado_1.year_selec_id = Val(year_TextBox.Text)
-        Administrado_1.peso_selec_id = Val(Peso_TextBox.Text)
-        Administrado_1.altura_selec_id = Val(high_TextBox.Text)
+        Administrado_1.year_selec_id = Me.PersonajesTableAdapter1.get_year(current_id)
+        Administrado_1.peso_selec_id = Me.PersonajesTableAdapter1.get_peso(current_id)
+        Administrado_1.altura_selec_id = Me.PersonajesTableAdapter1.get_altura(current_id)
         Administrado_1.color_selec_id = miColor
+
         Console.WriteLine(current_id)
 
     End Sub
@@ -86,4 +90,6 @@ Public Class Plantilla_preview
         Label1.Text = ""
 
     End Sub
+
+
 End Class

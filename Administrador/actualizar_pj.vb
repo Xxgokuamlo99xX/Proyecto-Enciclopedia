@@ -86,6 +86,7 @@ Public Class actualizar_pj
     End Sub
 
     Private Sub Panel1_Click(sender As Object, e As EventArgs) Handles Panel1.Click
-        cambiar_color()
+        color_panel = cambiar_color()
     End Sub
+
 End Class
