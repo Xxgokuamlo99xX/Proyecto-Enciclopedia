@@ -38,6 +38,9 @@ Partial Class actualizar_pj
         Me.nombre = New System.Windows.Forms.TextBox()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -188,13 +191,39 @@ Partial Class actualizar_pj
         Me.PictureBox1.TabIndex = 31
         Me.PictureBox1.TabStop = False
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 20.2!)
+        Me.Label5.Location = New System.Drawing.Point(336, 77)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(117, 35)
+        Me.Label5.TabIndex = 33
+        Me.Label5.Text = "Imagen"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackgroundImage = Global.Proyecto_Enciclopedia.My.Resources.Resources.Unknown_person
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Panel2.Location = New System.Drawing.Point(316, 115)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(160, 181)
+        Me.Panel2.TabIndex = 32
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        Me.OpenFileDialog1.Filter = """Archivos PNG (*.png)|*.png"""
+        '
         'actualizar_pj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(288, 450)
+        Me.ClientSize = New System.Drawing.Size(520, 450)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.no)
@@ -237,4 +266,7 @@ Partial Class actualizar_pj
     Friend WithEvents nombre As TextBox
     Friend WithEvents ColorDialog1 As ColorDialog
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

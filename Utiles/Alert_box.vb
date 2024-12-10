@@ -8,6 +8,7 @@
         RichTextBox1.Text = Mensaje
         Me.Show()
 
+
     End Sub
 
     Private Sub si(sender As Object, e As EventArgs) Handles Button1.Click

@@ -1,4 +1,9 @@
-﻿Public Class Registro_Pj
+﻿Imports System.IO
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Window
+
+Public Class Registro_Pj
+    Private imagen_nombre As String
+    Private info_man As New Info_manager
     Private color As String
     Private Sub accept_Click(sender As Object, e As EventArgs) Handles accept.Click
         If null_confirm() Then
@@ -15,7 +20,9 @@
                             Val(alt.Text),
                             color)
 
+                        info_man.guarda_imagen(imagen_nombre, Panel2.BackgroundImage)
                         Me.Hide()
+
                     End Sub
                 )
             End If
@@ -70,5 +77,26 @@
 
     End Sub
 
+    Private Sub Panel2_Click(sender As Object, e As EventArgs) Handles Panel2.Click
+        If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+            ' Mostrar la imagen seleccionada en un PictureBox
+            Dim extension As String = Path.GetExtension(OpenFileDialog1.FileName).ToLower()
+            If extension <> ".png" AndAlso extension <> ".jpg" Then
+                MessageBox.Show("Por favor, seleccione un archivo de imagen válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            End If
 
+            Panel2.BackgroundImage = Image.FromFile(OpenFileDialog1.FileName)
+            imagen_nombre = "img_" & Administrado_1.form_selec_id & ".png"
+
+        Else
+            MessageBox.Show("No se seleccionó ninguna imagen.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+
+
+    End Sub
+
+    Private Sub Registro_Pj_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Panel2.BackgroundImage = Image.FromFile("e: \Oscar Alvarado 510\Visual Studio\Proyecto Enciclopedia\Resources\Unknown_person.jpg")
+    End Sub
 End Class

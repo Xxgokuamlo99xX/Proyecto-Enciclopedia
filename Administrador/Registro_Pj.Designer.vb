@@ -37,15 +37,18 @@ Partial Class Registro_Pj
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SuspendLayout()
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.2!)
+        Me.Label2.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 14.2!)
         Me.Label2.Location = New System.Drawing.Point(8, 26)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(76, 22)
+        Me.Label2.Size = New System.Drawing.Size(84, 25)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Nombre"
         '
@@ -60,10 +63,10 @@ Partial Class Registro_Pj
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.2!)
+        Me.Label3.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 14.2!)
         Me.Label3.Location = New System.Drawing.Point(23, 91)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 22)
+        Me.Label3.Size = New System.Drawing.Size(60, 25)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Saga"
         '
@@ -78,10 +81,10 @@ Partial Class Registro_Pj
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.2!)
+        Me.Label4.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 14.2!)
         Me.Label4.Location = New System.Drawing.Point(23, 153)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(43, 22)
+        Me.Label4.Size = New System.Drawing.Size(48, 25)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Año"
         '
@@ -96,10 +99,10 @@ Partial Class Registro_Pj
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.2!)
+        Me.Label6.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 14.2!)
         Me.Label6.Location = New System.Drawing.Point(23, 278)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(76, 22)
+        Me.Label6.Size = New System.Drawing.Size(84, 25)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Altura"
         '
@@ -114,10 +117,10 @@ Partial Class Registro_Pj
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.2!)
+        Me.Label7.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 14.2!)
         Me.Label7.Location = New System.Drawing.Point(23, 213)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(54, 22)
+        Me.Label7.Size = New System.Drawing.Size(60, 25)
         Me.Label7.TabIndex = 9
         Me.Label7.Text = "Peso"
         '
@@ -175,12 +178,38 @@ Partial Class Registro_Pj
         Me.Label1.TabIndex = 16
         Me.Label1.Text = "Color"
         '
+        'Panel2
+        '
+        Me.Panel2.BackgroundImage = Global.Proyecto_Enciclopedia.My.Resources.Resources.Unknown_person
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Panel2.Location = New System.Drawing.Point(342, 102)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(160, 181)
+        Me.Panel2.TabIndex = 17
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 20.2!)
+        Me.Label5.Location = New System.Drawing.Point(362, 64)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(117, 35)
+        Me.Label5.TabIndex = 18
+        Me.Label5.Text = "Imagen"
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        Me.OpenFileDialog1.Filter = """Archivos PNG (*.png)|*.png"""
+        '
         'Registro_Pj
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(308, 472)
+        Me.ClientSize = New System.Drawing.Size(582, 472)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.no)
@@ -219,4 +248,7 @@ Partial Class Registro_Pj
     Friend WithEvents ColorDialog1 As ColorDialog
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label5 As Label
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

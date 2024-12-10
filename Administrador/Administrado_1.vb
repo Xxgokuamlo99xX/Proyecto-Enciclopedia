@@ -116,13 +116,13 @@
                 Dim palabra As String
                 Select Case filtro
                     Case 0
-                        palabra = form.name_textBox.Text.ToLower()
+                        palabra = form.name_lbl.Content.ToLower()
                     Case 1
-                        palabra = form.saga_TextBox.Text.ToLower()
+                        palabra = form.saga_lbl.Content.ToLower()
                     Case 2
-                        palabra = form.Peso_TextBox.Text.ToLower()
+                        palabra = form.peso_lbl.Text.ToLower()
                     Case 3
-                        palabra = form.year_TextBox.Text.ToLower()
+                        palabra = form.year_lbl.Text.ToLower()
                 End Select
                 Dim coincidencias As Integer = 0
 

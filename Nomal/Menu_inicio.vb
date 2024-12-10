@@ -9,6 +9,7 @@ Public Class Menu_inicio
     Private currentBtn As IconButton
     Private leftborderBtn As Panel
     Private currentchildform As Form
+    Private info_man As New Info_manager
 
 
     Public Sub New()
@@ -107,7 +108,7 @@ Public Class Menu_inicio
         ActivateButton(IconButton4, Color.Purple)
         Pantalla_de_carga.Show()
         'My.Computer.Audio.Play("E:\Oscar Alvarado 510\Visual Studio\Proyecto Enciclopedia\bin\Debug\Syn-Cole-Feel-Good-_NCS-Release_.wav")
-
+        info_man.create_directory()
 
 
     End Sub
@@ -144,7 +145,7 @@ Public Class Menu_inicio
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Dim fecha As String = DateTime.Now.ToString("d/M/yyyy")
-        Dim hora As String = DateTime.Now.ToString("H:m:s")
+        Dim hora As String = DateTime.Now.ToString("HH:mm:ss")
 
         fecha_lbl.Text = fecha
         Hora_lbl.Text = hora

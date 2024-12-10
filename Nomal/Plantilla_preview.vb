@@ -4,6 +4,7 @@ Public Class Plantilla_preview
     'Cambiar textbox por labels xdddddddddddaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     'me voy a matar si no funciona
     Public Shared ContadorInstancias As Integer = -1
+    Private info_man As New Info_manager
 
     Public Property current_id As Integer
     Private color_plantilla As String
@@ -56,16 +57,19 @@ Public Class Plantilla_preview
 
         asignar_val()
 
-        Label1.Text = ""
+        Seleccion_lbl.Text = ""
 
     End Sub
     Private Sub asignar_val()
-        Id_TextBox.Text = Me.PersonajesTableAdapter1.get_id(current_id)
-        name_textBox.Text = Me.PersonajesTableAdapter1.get_nombre(current_id)
-        saga_TextBox.Text = Me.PersonajesTableAdapter1.get_saga(current_id)
-        year_TextBox.Text = "Año: " & Me.PersonajesTableAdapter1.get_year(current_id)
-        Peso_TextBox.Text = "Peso: " & Me.PersonajesTableAdapter1.get_peso(current_id) & " Kg"
-        high_TextBox.Text = "Altura: " & Me.PersonajesTableAdapter1.get_altura(current_id) & " Mts"
+        Id_lbl.Text = Me.PersonajesTableAdapter1.get_id(current_id)
+        name_lbl.Content = Me.PersonajesTableAdapter1.get_nombre(current_id)
+        saga_lbl.Content = Me.PersonajesTableAdapter1.get_saga(current_id)
+        year_lbl.Text = "Año: " & Me.PersonajesTableAdapter1.get_year(current_id)
+        Peso_lbl.Text = "Peso: " & Me.PersonajesTableAdapter1.get_peso(current_id) & " Kg"
+        altura_lbl.Text = "Altura: " & Me.PersonajesTableAdapter1.get_altura(current_id) & " Mts"
+
+        info_man.cargar_imagen("img_" & current_id & ".png", Imagen)
+
     End Sub
 
     Public Shared Sub ReiniciarContador()
@@ -73,10 +77,10 @@ Public Class Plantilla_preview
     End Sub
 
     Private Sub Plantilla_preview_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
-        Label1.Text = "Seleccionado"
+        Seleccion_lbl.Text = "Seleccionado"
         Administrado_1.form_selec_id = current_id
-        Administrado_1.nom_selec_id = name_textBox.Text
-        Administrado_1.saga_selec_id = saga_TextBox.Text
+        Administrado_1.nom_selec_id = name_lbl.Content
+        Administrado_1.saga_selec_id = saga_lbl.Content
         Administrado_1.year_selec_id = Me.PersonajesTableAdapter1.get_year(current_id)
         Administrado_1.peso_selec_id = Me.PersonajesTableAdapter1.get_peso(current_id)
         Administrado_1.altura_selec_id = Me.PersonajesTableAdapter1.get_altura(current_id)
@@ -87,7 +91,7 @@ Public Class Plantilla_preview
     End Sub
 
     Private Sub Plantilla_preview_Leave(sender As Object, e As EventArgs) Handles MyBase.Leave
-        Label1.Text = ""
+        Seleccion_lbl.Text = ""
 
     End Sub
 

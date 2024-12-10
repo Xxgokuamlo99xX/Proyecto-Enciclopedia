@@ -1,6 +1,11 @@
 ﻿
+Imports System.IO
+Imports Microsoft.Win32
+
 Public Class actualizar_pj
 
+    Private imagen_nombre As String
+    Private info_man As New Info_manager
     Private color_panel As String
     Private Sub accept_Click(sender As Object, e As EventArgs) Handles accept.Click
         If null_confirm() Then
@@ -17,6 +22,7 @@ Public Class actualizar_pj
                             color_panel,
                             Administrado_1.form_selec_id)
 
+                        info_man.actualizar_img(imagen_nombre, Panel2.BackgroundImage)
                         Me.Close()
                     End Sub
                 )
@@ -87,6 +93,25 @@ Public Class actualizar_pj
 
     Private Sub Panel1_Click(sender As Object, e As EventArgs) Handles Panel1.Click
         color_panel = cambiar_color()
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+        If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+            ' Mostrar la imagen seleccionada en un PictureBox
+            Dim extension As String = Path.GetExtension(OpenFileDialog1.FileName).ToLower()
+            If extension <> ".png" AndAlso extension <> ".jpg" Then
+                MessageBox.Show("Por favor, seleccione un archivo de imagen válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            End If
+
+            Panel2.BackgroundImage = Image.FromFile(OpenFileDialog1.FileName)
+            imagen_nombre = "img_" & Administrado_1.form_selec_id & ".png"
+
+        Else
+            MessageBox.Show("No se seleccionó ninguna imagen.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+
+
     End Sub
 
 End Class
