@@ -32,7 +32,6 @@
 
         Next
 
-
     End Sub
 
     Public Sub actualizar()
@@ -80,6 +79,7 @@
     End Sub
 
     Private Sub Administrado_1_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+
         CerrarFormasEnPanel(Panel_plantilla)
 
     End Sub
@@ -91,7 +91,9 @@
     Private Sub Update_pj(sender As Object, e As EventArgs) Handles IconButton4.Click
         If form_selec_id <> 0 Then
 
+
             actualizar_pj.Show()
+
             'sexooooooooooooooooo!
         Else
             MsgBox("Selecciona un registro primero!")
@@ -176,6 +178,8 @@
         End If
 
     End Sub
+
+
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         filter_idex = ComboBox1.SelectedIndex

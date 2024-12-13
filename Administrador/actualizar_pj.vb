@@ -4,6 +4,7 @@ Imports Microsoft.Win32
 
 Public Class actualizar_pj
 
+
     Private imagen_nombre As String
     Private info_man As New Info_manager
     Private color_panel As String
@@ -22,7 +23,9 @@ Public Class actualizar_pj
                             color_panel,
                             Administrado_1.form_selec_id)
 
-                        info_man.actualizar_img(imagen_nombre, Panel2.BackgroundImage)
+                        info_man.id_list.Add(Administrado_1.form_selec_id)
+                        info_man.ModificarImagenConCopia(Panel2, imagen_nombre)
+                        info_man.guardar_lista()
                         Me.Close()
                     End Sub
                 )
@@ -88,6 +91,7 @@ Public Class actualizar_pj
         alt.Text = Administrado_1.altura_selec_id
         Panel1.BackColor = Administrado_1.color_selec_id
 
+        info_man.cargar_imagen_panel("img_" & Administrado_1.form_selec_id & ".png", Panel2)
 
     End Sub
 
@@ -95,10 +99,11 @@ Public Class actualizar_pj
         color_panel = cambiar_color()
     End Sub
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+    Private Sub cambiar_imagen(sender As Object, e As EventArgs) Handles Panel2.Click
+
         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
             ' Mostrar la imagen seleccionada en un PictureBox
-            Dim extension As String = Path.GetExtension(OpenFileDialog1.FileName).ToLower()
+            Dim extension As String = Path.GetExtension(OpenFileDialog1.FileName)
             If extension <> ".png" AndAlso extension <> ".jpg" Then
                 MessageBox.Show("Por favor, seleccione un archivo de imagen válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Return
@@ -106,7 +111,7 @@ Public Class actualizar_pj
 
             Panel2.BackgroundImage = Image.FromFile(OpenFileDialog1.FileName)
             imagen_nombre = "img_" & Administrado_1.form_selec_id & ".png"
-
+            Console.WriteLine("sdaiubxu")
         Else
             MessageBox.Show("No se seleccionó ninguna imagen.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If

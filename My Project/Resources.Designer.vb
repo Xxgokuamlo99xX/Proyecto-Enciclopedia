@@ -123,6 +123,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property paisaje_pixel_art_cabana_nieve_montanas_fondo_36682_108786() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("paisaje-pixel-art-cabana-nieve-montanas-fondo_36682-108786", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Unknown_person() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Unknown_person", resourceCulture)

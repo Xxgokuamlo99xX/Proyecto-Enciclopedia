@@ -31,7 +31,7 @@ Partial Class Pantalla_de_carga
         'ProgressBar1
         '
         Me.ProgressBar1.ForeColor = System.Drawing.Color.Red
-        Me.ProgressBar1.Location = New System.Drawing.Point(92, 112)
+        Me.ProgressBar1.Location = New System.Drawing.Point(88, 103)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(505, 31)
         Me.ProgressBar1.Step = 2
@@ -42,10 +42,10 @@ Partial Class Pantalla_de_carga
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 22.2!)
-        Me.Label1.Location = New System.Drawing.Point(247, 220)
+        Me.Label1.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 30.2!)
+        Me.Label1.Location = New System.Drawing.Point(200, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(215, 38)
+        Me.Label1.Size = New System.Drawing.Size(308, 52)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Cargando..."
         Me.Label1.UseWaitCursor = True
@@ -58,9 +58,9 @@ Partial Class Pantalla_de_carga
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Proyecto_Enciclopedia.My.Resources.Resources.Imagen_de_WhatsApp_2024_01_03_a_las_17_51_47_d6aaf53f
+        Me.BackgroundImage = Global.Proyecto_Enciclopedia.My.Resources.Resources.paisaje_pixel_art_cabana_nieve_montanas_fondo_36682_108786
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(684, 267)
+        Me.ClientSize = New System.Drawing.Size(684, 216)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ProgressBar1)
         Me.DoubleBuffered = True

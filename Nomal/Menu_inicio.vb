@@ -106,6 +106,11 @@ Public Class Menu_inicio
 
     Private Sub Menu_inicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ActivateButton(IconButton4, Color.Purple)
+        info_man.leer_lista()
+
+        info_man.intercambiar_nombre()
+
+        info_man.vaciar_lista()
         Pantalla_de_carga.Show()
         'My.Computer.Audio.Play("E:\Oscar Alvarado 510\Visual Studio\Proyecto Enciclopedia\bin\Debug\Syn-Cole-Feel-Good-_NCS-Release_.wav")
         info_man.create_directory()

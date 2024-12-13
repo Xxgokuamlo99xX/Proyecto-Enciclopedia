@@ -97,6 +97,6 @@ Public Class Registro_Pj
     End Sub
 
     Private Sub Registro_Pj_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Panel2.BackgroundImage = Image.FromFile("e: \Oscar Alvarado 510\Visual Studio\Proyecto Enciclopedia\Resources\Unknown_person.jpg")
+        Panel2.BackgroundImage = Image.FromFile("E:\Oscar Alvarado 510\Visual Studio\Proyecto Enciclopedia\Resources\Unknown_person.jpg")
     End Sub
 End Class

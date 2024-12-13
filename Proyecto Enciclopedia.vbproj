@@ -79,6 +79,12 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\pixel-art-book-icon-png.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -261,6 +267,7 @@
     <None Include="mashDataSet.xss">
       <DependentUpon>mashDataSet.xsd</DependentUpon>
     </None>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -359,6 +366,7 @@
     <None Include="Resources\images.jpg" />
     <None Include="Resources\b22300b7185af4b6f6710d02901d34a1.jpg" />
     <None Include="Resources\3ae913d2143c423e8bc05c49d4186578.jpg" />
+    <None Include="Resources\paisaje-pixel-art-cabana-nieve-montanas-fondo_36682-108786.jpg" />
     <Content Include="Resources\pixel-art-book-icon-png.ico" />
     <None Include="Resources\fondo de pantalla 2.gif" />
   </ItemGroup>

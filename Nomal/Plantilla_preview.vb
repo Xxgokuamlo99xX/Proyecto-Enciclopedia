@@ -58,7 +58,7 @@ Public Class Plantilla_preview
         asignar_val()
 
         Seleccion_lbl.Text = ""
-
+        Console.WriteLine(current_id)
     End Sub
     Private Sub asignar_val()
         Id_lbl.Text = Me.PersonajesTableAdapter1.get_id(current_id)
@@ -68,7 +68,7 @@ Public Class Plantilla_preview
         Peso_lbl.Text = "Peso: " & Me.PersonajesTableAdapter1.get_peso(current_id) & " Kg"
         altura_lbl.Text = "Altura: " & Me.PersonajesTableAdapter1.get_altura(current_id) & " Mts"
 
-        info_man.cargar_imagen("img_" & current_id & ".png", Imagen)
+        info_man.cargar_imagen("img_" & current_id & ".png", Imagen, current_id)
 
     End Sub
 
@@ -76,7 +76,7 @@ Public Class Plantilla_preview
         ContadorInstancias = 0 ' Reinicia a 0, eliminando el estado nulo
     End Sub
 
-    Private Sub Plantilla_preview_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
+    Private Sub Plantilla_preview_Enter(sender As Object, e As EventArgs) Handles Seleccion_lbl.Enter
         Seleccion_lbl.Text = "Seleccionado"
         Administrado_1.form_selec_id = current_id
         Administrado_1.nom_selec_id = name_lbl.Content
@@ -90,10 +90,9 @@ Public Class Plantilla_preview
 
     End Sub
 
-    Private Sub Plantilla_preview_Leave(sender As Object, e As EventArgs) Handles MyBase.Leave
-        Seleccion_lbl.Text = ""
+    Private Sub Plantilla_preview_Leave(sender As Object, e As EventArgs) Handles Seleccion_lbl.Leave
+        Seleccion_lbl.Text = "Seleccionar"
 
     End Sub
-
 
 End Class

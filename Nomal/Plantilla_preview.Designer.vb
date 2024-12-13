@@ -41,7 +41,7 @@ Partial Class Plantilla_preview
         Me.Seleccion_lbl.AutoSize = True
         Me.Seleccion_lbl.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 22.2!)
         Me.Seleccion_lbl.ForeColor = System.Drawing.Color.White
-        Me.Seleccion_lbl.Location = New System.Drawing.Point(94, 430)
+        Me.Seleccion_lbl.Location = New System.Drawing.Point(100, 430)
         Me.Seleccion_lbl.Name = "Seleccion_lbl"
         Me.Seleccion_lbl.Size = New System.Drawing.Size(179, 38)
         Me.Seleccion_lbl.TabIndex = 6
@@ -59,10 +59,11 @@ Partial Class Plantilla_preview
         '
         'Imagen
         '
+        Me.Imagen.Enabled = False
         Me.Imagen.Image = Global.Proyecto_Enciclopedia.My.Resources.Resources.Unknown_person
-        Me.Imagen.Location = New System.Drawing.Point(122, 50)
+        Me.Imagen.Location = New System.Drawing.Point(4, 73)
         Me.Imagen.Name = "Imagen"
-        Me.Imagen.Size = New System.Drawing.Size(142, 149)
+        Me.Imagen.Size = New System.Drawing.Size(150, 162)
         Me.Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.Imagen.TabIndex = 12
         Me.Imagen.TabStop = False
@@ -71,6 +72,7 @@ Partial Class Plantilla_preview
         '
         Me.id_lbl.AutoSize = True
         Me.id_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.id_lbl.Enabled = False
         Me.id_lbl.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 22.2!)
         Me.id_lbl.ForeColor = System.Drawing.Color.White
         Me.id_lbl.Location = New System.Drawing.Point(12, 9)
@@ -84,9 +86,10 @@ Partial Class Plantilla_preview
         '
         Me.year_lbl.AutoSize = True
         Me.year_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.year_lbl.Enabled = False
         Me.year_lbl.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 22.2!)
         Me.year_lbl.ForeColor = System.Drawing.Color.White
-        Me.year_lbl.Location = New System.Drawing.Point(12, 267)
+        Me.year_lbl.Location = New System.Drawing.Point(12, 288)
         Me.year_lbl.Name = "year_lbl"
         Me.year_lbl.Size = New System.Drawing.Size(89, 38)
         Me.year_lbl.TabIndex = 16
@@ -97,9 +100,10 @@ Partial Class Plantilla_preview
         '
         Me.peso_lbl.AutoSize = True
         Me.peso_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.peso_lbl.Enabled = False
         Me.peso_lbl.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 22.2!)
         Me.peso_lbl.ForeColor = System.Drawing.Color.White
-        Me.peso_lbl.Location = New System.Drawing.Point(12, 314)
+        Me.peso_lbl.Location = New System.Drawing.Point(12, 335)
         Me.peso_lbl.Name = "peso_lbl"
         Me.peso_lbl.Size = New System.Drawing.Size(89, 38)
         Me.peso_lbl.TabIndex = 17
@@ -110,9 +114,10 @@ Partial Class Plantilla_preview
         '
         Me.altura_lbl.AutoSize = True
         Me.altura_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.altura_lbl.Enabled = False
         Me.altura_lbl.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 22.2!)
         Me.altura_lbl.ForeColor = System.Drawing.Color.White
-        Me.altura_lbl.Location = New System.Drawing.Point(12, 369)
+        Me.altura_lbl.Location = New System.Drawing.Point(12, 390)
         Me.altura_lbl.Name = "altura_lbl"
         Me.altura_lbl.Size = New System.Drawing.Size(125, 38)
         Me.altura_lbl.TabIndex = 18
@@ -123,26 +128,28 @@ Partial Class Plantilla_preview
         '
         Me.saga_lbl.BackColor = System.Drawing.Color.Transparent
         Me.saga_lbl.Content = "The\ legend\ of\ zelda"
+        Me.saga_lbl.Enabled = False
         Me.saga_lbl.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 22.2!)
         Me.saga_lbl.ForeColor = System.Drawing.Color.White
         Me.saga_lbl.HorizontalAlignment = CuoreUI.Controls.cuiLabel.HorizontalAlignments.Center
-        Me.saga_lbl.Location = New System.Drawing.Point(48, 202)
+        Me.saga_lbl.Location = New System.Drawing.Point(168, 146)
         Me.saga_lbl.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.saga_lbl.Name = "saga_lbl"
-        Me.saga_lbl.Size = New System.Drawing.Size(280, 72)
+        Me.saga_lbl.Size = New System.Drawing.Size(193, 138)
         Me.saga_lbl.TabIndex = 19
         '
         'name_lbl
         '
         Me.name_lbl.BackColor = System.Drawing.Color.Transparent
         Me.name_lbl.Content = "Donkey\ kong"
+        Me.name_lbl.Enabled = False
         Me.name_lbl.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 22.2!)
         Me.name_lbl.ForeColor = System.Drawing.Color.White
         Me.name_lbl.HorizontalAlignment = CuoreUI.Controls.cuiLabel.HorizontalAlignments.Center
-        Me.name_lbl.Location = New System.Drawing.Point(74, 13)
+        Me.name_lbl.Location = New System.Drawing.Point(168, 13)
         Me.name_lbl.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.name_lbl.Name = "name_lbl"
-        Me.name_lbl.Size = New System.Drawing.Size(237, 46)
+        Me.name_lbl.Size = New System.Drawing.Size(193, 125)
         Me.name_lbl.TabIndex = 20
         '
         'Plantilla_preview

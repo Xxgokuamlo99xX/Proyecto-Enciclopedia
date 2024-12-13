@@ -22,6 +22,7 @@ Partial Class Registro_Pj
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Registro_Pj))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.nombre = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -37,9 +38,9 @@ Partial Class Registro_Pj
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
         'Label2
@@ -136,7 +137,7 @@ Partial Class Registro_Pj
         '
         Me.no.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.no.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 10.2!)
-        Me.no.Location = New System.Drawing.Point(186, 427)
+        Me.no.Location = New System.Drawing.Point(313, 430)
         Me.no.Name = "no"
         Me.no.Size = New System.Drawing.Size(83, 30)
         Me.no.TabIndex = 13
@@ -146,7 +147,7 @@ Partial Class Registro_Pj
         'accept
         '
         Me.accept.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 10.2!)
-        Me.accept.Location = New System.Drawing.Point(62, 427)
+        Me.accept.Location = New System.Drawing.Point(189, 430)
         Me.accept.Name = "accept"
         Me.accept.Size = New System.Drawing.Size(76, 30)
         Me.accept.TabIndex = 12
@@ -161,7 +162,7 @@ Partial Class Registro_Pj
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Location = New System.Drawing.Point(123, 363)
+        Me.Panel1.Location = New System.Drawing.Point(250, 366)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(77, 47)
         Me.Panel1.TabIndex = 15
@@ -172,20 +173,11 @@ Partial Class Registro_Pj
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Cursor = System.Windows.Forms.Cursors.No
         Me.Label1.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 12.2!)
-        Me.Label1.Location = New System.Drawing.Point(129, 338)
+        Me.Label1.Location = New System.Drawing.Point(256, 341)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 22)
         Me.Label1.TabIndex = 16
         Me.Label1.Text = "Color"
-        '
-        'Panel2
-        '
-        Me.Panel2.BackgroundImage = Global.Proyecto_Enciclopedia.My.Resources.Resources.Unknown_person
-        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Panel2.Location = New System.Drawing.Point(342, 102)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(160, 181)
-        Me.Panel2.TabIndex = 17
         '
         'Label5
         '
@@ -199,8 +191,16 @@ Partial Class Registro_Pj
         '
         'OpenFileDialog1
         '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        Me.OpenFileDialog1.Filter = """Archivos PNG (*.png)|*.png"""
+        Me.OpenFileDialog1.Filter = """Archivos de imagen (*.png;*.jpg;*.jpeg)|*.png;*.jpg;*.jpeg"""
+        '
+        'Panel2
+        '
+        Me.Panel2.BackgroundImage = Global.Proyecto_Enciclopedia.My.Resources.Resources.Unknown_person
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Panel2.Location = New System.Drawing.Point(342, 102)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(160, 181)
+        Me.Panel2.TabIndex = 17
         '
         'Registro_Pj
         '
@@ -225,8 +225,8 @@ Partial Class Registro_Pj
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.nombre)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Registro_Pj"
-        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Registro Personaje"
         Me.ResumeLayout(False)

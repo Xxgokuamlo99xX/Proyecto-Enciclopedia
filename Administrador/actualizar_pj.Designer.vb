@@ -22,6 +22,7 @@ Partial Class actualizar_pj
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(actualizar_pj))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.no = New System.Windows.Forms.Button()
@@ -37,11 +38,9 @@ Partial Class actualizar_pj
         Me.Label2 = New System.Windows.Forms.Label()
         Me.nombre = New System.Windows.Forms.TextBox()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
         'Label1
@@ -50,7 +49,7 @@ Partial Class actualizar_pj
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Cursor = System.Windows.Forms.Cursors.No
         Me.Label1.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 14.2!)
-        Me.Label1.Location = New System.Drawing.Point(102, 312)
+        Me.Label1.Location = New System.Drawing.Point(229, 312)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 25)
         Me.Label1.TabIndex = 30
@@ -60,7 +59,7 @@ Partial Class actualizar_pj
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Location = New System.Drawing.Point(99, 340)
+        Me.Panel1.Location = New System.Drawing.Point(226, 340)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(77, 47)
         Me.Panel1.TabIndex = 29
@@ -69,7 +68,7 @@ Partial Class actualizar_pj
         '
         Me.no.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.no.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.no.Location = New System.Drawing.Point(164, 408)
+        Me.no.Location = New System.Drawing.Point(291, 408)
         Me.no.Name = "no"
         Me.no.Size = New System.Drawing.Size(82, 30)
         Me.no.TabIndex = 28
@@ -79,7 +78,7 @@ Partial Class actualizar_pj
         'accept
         '
         Me.accept.Font = New System.Drawing.Font("Fixedsys Excelsior 3.01", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.accept.Location = New System.Drawing.Point(40, 408)
+        Me.accept.Location = New System.Drawing.Point(167, 408)
         Me.accept.Name = "accept"
         Me.accept.Size = New System.Drawing.Size(76, 30)
         Me.accept.TabIndex = 27
@@ -180,17 +179,6 @@ Partial Class actualizar_pj
         '
         Me.ColorDialog1.FullOpen = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Image = Global.Proyecto_Enciclopedia.My.Resources.Resources._3ae913d2143c423e8bc05c49d4186578
-        Me.PictureBox1.Location = New System.Drawing.Point(209, 314)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(67, 73)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 31
-        Me.PictureBox1.TabStop = False
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -201,6 +189,10 @@ Partial Class actualizar_pj
         Me.Label5.TabIndex = 33
         Me.Label5.Text = "Imagen"
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.Filter = """Archivos de imagen (*.png;*.jpg;*.jpeg)|*.png;*.jpg;*.jpeg"""
+        '
         'Panel2
         '
         Me.Panel2.BackgroundImage = Global.Proyecto_Enciclopedia.My.Resources.Resources.Unknown_person
@@ -209,11 +201,6 @@ Partial Class actualizar_pj
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(160, 181)
         Me.Panel2.TabIndex = 32
-        '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        Me.OpenFileDialog1.Filter = """Archivos PNG (*.png)|*.png"""
         '
         'actualizar_pj
         '
@@ -238,13 +225,11 @@ Partial Class actualizar_pj
         Me.Controls.Add(Me.saga)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.nombre)
-        Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "actualizar_pj"
-        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Actualizar Personaje"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -265,7 +250,6 @@ Partial Class actualizar_pj
     Friend WithEvents Label2 As Label
     Friend WithEvents nombre As TextBox
     Friend WithEvents ColorDialog1 As ColorDialog
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
